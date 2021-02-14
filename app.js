@@ -86,13 +86,13 @@ const createSlider = () => {
   //my improvement
   //taking the value of duration field if its negative than show an alert
   let duration = document.getElementById('duration').value;
-  if (duration < 500) {
+  if (duration < 0) {
     alert("Please enter more then half a second");
     imagesArea.style.display = 'block';
     document.querySelector('.main').style.display = 'none';
     return;
   }
-  else if(duration > 500){
+  else if(duration > 0){
     duration = duration;
   }
   else {
