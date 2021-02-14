@@ -58,8 +58,8 @@ const selectItem = (event, img) => {
     sliders.push(img);
   } else {
     element.classList.toggle('added');//my improvement
-    let test = sliders.indexOf(img);//my improvement
-    sliders.splice(test, 1);//my improvement
+    let imgIndex = sliders.indexOf(img);//my improvement
+    sliders.splice(imgIndex, 1);//my improvement
   }
 }
 // var timer
@@ -87,7 +87,7 @@ const createSlider = () => {
   //taking the value of duration field if its negative than show an alert
   let duration = document.getElementById('duration').value;
   if (duration < 0) {
-    alert("Please enter more then half a second");
+    alert("Duration can't be negative");
     imagesArea.style.display = 'block';
     document.querySelector('.main').style.display = 'none';
     return;
